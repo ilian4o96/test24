@@ -1,0 +1,28 @@
+extends ../layout/index
+
+block contenido
+    .py-10
+        h1.text-4xl.my-10.font-extrabold.text-center Parse
+            span.font-normal That!
+        h2.text-center.text-2xl.font-extrabold= pagina
+
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                form.space-y-4(action="")
+                    div 
+                        label.block.text-sm.uppercase.text-gray-600.mb-3.font-bold(for="nombre") Tu nombre
+                        input#nombre.w-full.px-3p.py-2.border.border-gray-300.rounded-md.placeholder-gray-400.pl-9(placeholder="Tu nombre" type="text" name="nombre")
+                    div 
+                        label.block.text-sm.uppercase.text-gray-600.mb-3.font-bold(for="email") Email
+                        input#email.w-full.px-3p.py-2.border.border-gray-300.rounded-md.placeholder-gray-400.pl-9(placeholder="Tu email" type="email" name="email")
+                    div 
+                        label.block.text-sm.uppercase.text-gray-600.mb-3.font-bold(for="password") Password
+                        input#password.w-full.px-3p.py-2.border.border-gray-300.rounded-md.placeholder-gray-400.pl-9(placeholder="Tu password" type="password" name="password")
+                    div 
+                        label.block.text-sm.uppercase.text-gray-600.mb-3.font-bold(for="repetir_Password") Repetir Password
+                        input#repetir_Password.w-full.px-3p.py-2.border.border-gray-300.rounded-md.placeholder-gray-400.pl-9(placeholder="Repite tu Password" type="Password" name="repetir_Password")
+                    .flex.items-center.justify-between 
+                        a.text-gray-500.text-xs(href="/auth/login") ¿Ya tienes cuenta? Inicia sesión 
+                        a.text-gray-500.text-xs(href="/auth/olvide-password") Olvidé mi password
+                    input(class="w-full bg-indigo-300 hover:bg-indigo-700 text-white font-bold py-3 cursor-pointer rounded-md" type="submit" value="Crear Cuenta ")
+
